@@ -1,0 +1,8 @@
+League=University league
+Win=3
+Draw=1
+Loss=0
+Team=Spartans
+Team1=Warriors
+Team2=Tigers
+Team3=Wolves
