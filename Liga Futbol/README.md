@@ -7,7 +7,7 @@ Juan Antonio Bonett Sanchez
 Este proyecto es un programa en C++ ejecutado desde consola que administra una liga de fútbol. Carga la configuración de la liga desde "config.txt", permite registrar resultados de partidos, guarda la información en archivos de texto, muestra la tabla de posiciones y conserva los datos incluso después de cerrar y volver a abrir el programa.
 
 *Compilacion y ejecucion
-Para compilar y ejecutar este archivo debes dirigirte a la terminal, deber dirigirte hacia el archivo Liga futbol de la siguiente manera; cd "Liga futbol". Luego debes ingresar ". \ .ps1" (sin los espacios) y el archivo se ejecutara exitosamente.
+Para poder compilar este archivo deberas dirigirte a la terminal, dirigirte hacia el archivo de la siguiente manera; cd "Liga futbol". Una vez ahi deberas escribir el siguiente comando; g++ src/main.cpp -o Liga . Una vez hayas hecho esto deberas ejecutar el archivo escribiendo ./Liga y el archivo se ejecutara exitosamente
 
 *Formato de "config.txt"
 El archivo "config.txt" almacena la configuración de la liga. En él se define el nombre de la liga, los puntos por victoria, empate y derrota, y los equipos participantes. Cada dato se guarda en una línea usando el formato"clave=valor".
