@@ -262,16 +262,28 @@ void enterDetails() {
     int enteredNumberValue;
 
     cout << "Please enter day of the match: ";
-    cin >> enteredNumberValue;
-    enteredNumericMatchData.push_back(enteredNumberValue);
+    while(!(cin >> enteredNumberValue)){
+        cout << "invalid input\n";
+        cin.clear();
+        cin.ignore(10000, '\n');
+        cout << "Pleas enter day of the match again: ";
+    } enteredNumericMatchData.push_back(enteredNumberValue);
 
     cout << "Please enter month of the match: ";
-    cin >> enteredNumberValue;
-    enteredNumericMatchData.push_back(enteredNumberValue);
+    while(!(cin >> enteredNumberValue)){
+        cout << "invalid input";
+        cin.clear();
+        cin.ignore(10000, '\n');
+        cout << "Pleas enter month of the match again: ";
+    } enteredNumericMatchData.push_back(enteredNumberValue);
 
     cout << "Please enter year of the match: ";
-    cin >> enteredNumberValue;
-    enteredNumericMatchData.push_back(enteredNumberValue);
+    while(!(cin >> enteredNumberValue)){
+        cout << "invalid input";
+        cin.clear();
+        cin.ignore(10000, '\n');
+        cout << "Pleas enter year of the match again: ";
+    } enteredNumericMatchData.push_back(enteredNumberValue);
 
     showAllAvailableTeamNames();
 
@@ -284,14 +296,21 @@ void enterDetails() {
     enteredTeamNames.push_back(enteredTextValue);
 
     cout << "Enter home goals: ";
-    cin >> enteredNumberValue;
-    enteredNumericMatchData.push_back(enteredNumberValue);
-
+    while(!(cin >> enteredNumberValue)){
+        cout << "invalid input";
+        cin.clear();
+        cin.ignore(10000, '\n');
+        cout << "Pleas enter home goals again: ";
+    } enteredNumericMatchData.push_back(enteredNumberValue);
+    
     cout << "Enter away goals: ";
-    cin >> enteredNumberValue;
-    enteredNumericMatchData.push_back(enteredNumberValue);
+    while(!(cin >> enteredNumberValue)){
+        cout << "invalid input";
+        cin.clear();
+        cin.ignore(10000, '\n');
+        cout << "Pleas enter away goals again: ";
+    } enteredNumericMatchData.push_back(enteredNumberValue);
 }
-
 bool detailsValidation() {
     if (enteredNumericMatchData.size() != 5 || enteredTeamNames.size() != 2) {
         cout << "Error: missing match data\n";
@@ -596,9 +615,15 @@ void showLeagueTableOnScreen() {
              << leagueTable[currentTeamIndex].totalPoints << "\n";
     }
 
-    cout << "Do you want to save the table in data/tabla.txt? (1 yes / 0 no): ";
+   cout << "Do you want to save the table in data/tabla.txt? (1 yes / 0 no): ";
     int userChoiceToSaveTable;
-    cin >> userChoiceToSaveTable;
+    while(!(cin >> userChoiceToSaveTable)){
+        cout << "Invalid intput\n";
+        cin.clear();
+        cin.ignore(10000, '\n');
+        cout << "Do you want to save the table in data/tabla.txt? (1 yes / 0 no): ";
+
+    }
 
     if (userChoiceToSaveTable == 1) {
         saveLeagueTableInTableFile(leagueTable);
