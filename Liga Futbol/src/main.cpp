@@ -1,6 +1,5 @@
 #include <iostream>
 #include <fstream>
-#include <cstdio>
 #include "function.cpp"
 using namespace std;
 
