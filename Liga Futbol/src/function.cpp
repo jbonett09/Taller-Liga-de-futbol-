@@ -638,7 +638,7 @@ void showAllMatchdaysFromDatesFile() {
     }
 }
 
-int showMainMenuAndReturnUserOption() {
+string showMainMenuAndReturnUserOption() {
     cout << "\n";
     cout << readElements("League") << "\n";
     cout << "1. View table\n";
@@ -648,7 +648,7 @@ int showMainMenuAndReturnUserOption() {
     cout << "5. Exit\n";
     cout << "Choose one option: ";
 
-    int userMenuOption;
+    string userMenuOption;
     cin >> userMenuOption;
     return userMenuOption;
 }
@@ -671,20 +671,20 @@ void run() {
         return;
     }
 
-    int currentUserMenuOption = 0;
+    string currentUserMenuOption = "";
 
-    while (currentUserMenuOption != 5) {
+    while (currentUserMenuOption != "5") {
         currentUserMenuOption = showMainMenuAndReturnUserOption();
 
-        if (currentUserMenuOption == 1) {
+        if (currentUserMenuOption == "1") {
             showLeagueTableOnScreen();
-        } else if (currentUserMenuOption == 2) {
+        } else if (currentUserMenuOption == "2") {
             registerOneMatchUsingCurrentFunctions();
-        } else if (currentUserMenuOption == 3) {
+        } else if (currentUserMenuOption == "3") {
             showAllMatchdaysFromDatesFile();
-        } else if (currentUserMenuOption == 4) {
+        } else if (currentUserMenuOption == "4") {
             showAllMatchesStoredInGamesFile();
-        } else if (currentUserMenuOption == 5) {
+        } else if (currentUserMenuOption == "5") {
             cout << "Program finished\n";
         } else {
             cout << "Invalid option\n";
